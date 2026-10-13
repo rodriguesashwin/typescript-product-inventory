@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Inventory Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Product Inventory Manager</h1>
+        <p>Manage your store inventory easily</p>
+    </header>
+
+    <main>
+        <section class="form-card">
+            <h2>Add a Product</h2>
+            <form id="productForm">
+                <input id="productName" type="text"
+                    placeholder="Product name" required>
+
+                <input id="productPrice" type="number"
+                    placeholder="Price" min="0.01" step="0.01" required>
+
+                <input id="productQuantity" type="number"
+                    placeholder="Quantity" min="0" step="1" required>
+
+                <button type="submit">Add Product</button>
+            </form>
+        </section>
+
+        <section class="inventory">
+            <h2>Inventory</h2>
+            <p id="summary">Loading inventory...</p>
+            <input id="search" type="text"
+                placeholder="Search products...">
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total Value</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productList"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="dist/app.js"></script>
+</body>
+</html>
